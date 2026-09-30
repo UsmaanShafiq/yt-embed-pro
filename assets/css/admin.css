@@ -1,0 +1,218 @@
+/* YT Embed Pro: admin styles */
+
+/* ── Shell ───────────────────────────────────────────────── */
+.yse-admin-wrap {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+#wpcontent { padding-left: 0 !important; }
+
+/* ── Header ──────────────────────────────────────────────── */
+.yse-admin-header {
+	background: linear-gradient(135deg, #c10000 0%, #ff0000 45%, #ff4444 100%);
+	padding: 0 32px;
+	box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+.yse-admin-header-inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 1200px;
+	margin: 0 auto;
+	height: 72px;
+}
+.yse-admin-logo {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+}
+.yse-admin-logo h1 {
+	margin: 0;
+	font-size: 22px;
+	font-weight: 800;
+	color: #fff;
+	letter-spacing: -0.3px;
+}
+.yse-admin-logo span {
+	font-size: 11px;
+	color: rgba(255,255,255,0.65);
+	display: block;
+	margin-top: 1px;
+}
+.yse-admin-header-right {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+.yse-header-author { color: rgba(255,255,255,0.7); font-size: 12px; }
+.yse-header-author a { color: #fff; text-decoration: underline; }
+
+/* ── Nav ─────────────────────────────────────────────────── */
+.yse-admin-nav {
+	display: flex;
+	background: #fff;
+	border-bottom: 1px solid #e8e8e8;
+	padding: 0 32px;
+	gap: 2px;
+}
+.yse-nav-tab {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 14px 18px;
+	font-size: 13px;
+	font-weight: 600;
+	color: #555;
+	text-decoration: none;
+	border-bottom: 3px solid transparent;
+	transition: color 0.15s, border-color 0.15s;
+}
+.yse-nav-tab:hover { color: #c10000; }
+.yse-nav-tab.is-active {
+	color: #c10000;
+	border-bottom-color: #c10000;
+}
+.yse-nav-icon { font-size: 15px; }
+
+/* ── Content area ────────────────────────────────────────── */
+.yse-admin-content {
+	max-width: 1200px;
+	margin: 28px auto;
+	padding: 0 32px 48px;
+}
+.yse-admin-content .form-table td { padding: 10px 20px 10px 0; }
+.yse-admin-content .form-table th { padding: 10px 20px 10px 0; width: 200px; font-weight: 600; }
+.yse-admin-content input[type="submit"] {
+	background: #c10000;
+	border-color: #a00000;
+	color: #fff;
+	border-radius: 6px;
+	padding: 8px 22px;
+	font-size: 14px;
+	font-weight: 600;
+}
+.yse-admin-content input[type="submit"]:hover { background: #a00000; }
+
+/* ── Cards ───────────────────────────────────────────────── */
+.yse-admin-card {
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+	padding: 24px 28px;
+	margin-bottom: 24px;
+}
+.yse-admin-card h2 {
+	margin: 0 0 18px;
+	font-size: 17px;
+	font-weight: 700;
+	color: #1a1a1a;
+}
+.yse-admin-card h3 {
+	margin: 0 0 12px;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+/* ── Dashboard grid ──────────────────────────────────────── */
+.yse-dashboard-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 24px;
+}
+.yse-setup-card,
+.yse-layouts-card { grid-column: span 1; }
+
+/* ── Setup steps ─────────────────────────────────────────── */
+.yse-setup-steps {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+}
+.yse-setup-steps li {
+	display: flex;
+	gap: 14px;
+	align-items: flex-start;
+	opacity: 0.5;
+	transition: opacity 0.2s;
+}
+.yse-setup-steps li.done { opacity: 1; }
+.yse-setup-steps li:not(.done) { opacity: 0.85; }
+.yse-step-num {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background: #f0f0f1;
+	color: #555;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+	font-size: 14px;
+	flex-shrink: 0;
+}
+.yse-setup-steps li.done .yse-step-num {
+	background: #e8f5e9;
+	color: #2e7d32;
+}
+.yse-setup-steps li strong { display: block; font-size: 14px; margin-bottom: 3px; }
+.yse-setup-steps li p { margin: 0 0 8px; font-size: 13px; color: #666; }
+.yse-sm-btn.button { padding: 4px 14px; font-size: 12px; }
+
+/* ── Shortcode reference ─────────────────────────────────── */
+.yse-code-label { margin: 12px 0 4px; font-size: 12px; font-weight: 600; color: #777; text-transform: uppercase; letter-spacing: 0.05em; }
+.yse-code-block {
+	display: block;
+	padding: 10px 14px;
+	background: #f8f8f8;
+	border-left: 3px solid #ddd;
+	border-radius: 0 6px 6px 0;
+	font-size: 13px;
+	color: #333;
+	word-break: break-all;
+}
+.yse-code-block:first-child { margin-top: 0; }
+.yse-code-note { margin: 4px 0 10px; font-size: 12px; color: #888; font-style: italic; }
+
+/* ── Layout cards ────────────────────────────────────────── */
+.yse-layout-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 14px;
+}
+.yse-layout-card {
+	position: relative;
+	background: #f8f8f8;
+	border-radius: 10px;
+	padding: 18px 14px 14px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5px;
+	transition: box-shadow 0.2s;
+}
+.yse-layout-card:hover { box-shadow: 0 3px 12px rgba(0,0,0,0.10); }
+.yse-layout-icon { font-size: 26px; margin-bottom: 4px; }
+.yse-layout-card strong { font-size: 12px; font-weight: 700; }
+.yse-layout-card span { font-size: 11px; color: #777; }
+
+/* ── Inline helpers ──────────────────────────────────────── */
+.yse-inline-btn { margin-left: 8px !important; }
+.yse-test-result {
+	margin-left: 10px;
+	font-weight: 600;
+	font-size: 13px;
+}
+.yse-test-result.success { color: #2e7d32; }
+.yse-test-result.error   { color: #c10000; }
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 900px) {
+	.yse-dashboard-grid { grid-template-columns: 1fr; }
+	.yse-layout-grid { grid-template-columns: repeat(2, 1fr); }
+	.yse-admin-nav { padding: 0 16px; overflow-x: auto; }
+	.yse-admin-content { padding: 0 16px 48px; }
+}
